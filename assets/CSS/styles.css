@@ -44,6 +44,7 @@ h2 {
 #chat-box{
     background-color: rgba(0, 0, 0, .5);
     height:415px; 
+    overflow: hidden;
 }
 #user-chat{
     width: 95%;

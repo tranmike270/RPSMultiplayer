@@ -38,6 +38,15 @@ dbRef.on('value', function(snapshot){
   console.log(error);
 };
 
+database.ref('homeChat/').on('child_added', function(snapshot){
+  var msg = snapshot.val().message;
+  console.log(msg);
+  var messageDiv = $("<div>").attr({
+    class: "chat-message"
+  });
+  $(messageDiv).append(msg);
+  $("#chat-box").append(messageDiv);
+});
 // Controlers
 var signIn = false;
 
@@ -243,5 +252,18 @@ function displayGameHome(){
   $("#sign-in-box").remove();
   $("#game-home-page").css("visibility", "visible");
   
+  $("#send-message").on('click', function(e){
+  
+    var message = $("#user-chat").val().trim();
+    if (message !== ""){
+       console.log(message);
+       database.ref('homeChat/').push({
+         message: user.displayName + ": " + message
+       })
+      
+
+    }
+   
+  })
 
 };
