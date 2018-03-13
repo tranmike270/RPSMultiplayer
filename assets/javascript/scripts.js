@@ -159,7 +159,7 @@ function signInUser(){
 
 
 function authenticateInfo(string, email, password, passwordAuth){
-
+  console.log(string);
    if (email.indexOf("@") === -1 || email.indexOf(".com") === -1){
       var errorDisplay = $("<p>").attr({
         class: "error-message"
@@ -167,7 +167,7 @@ function authenticateInfo(string, email, password, passwordAuth){
          console.log(errorDisplay);
         $("#sign-in-box").prepend(errorDisplay);
         return false;
-      }else if (string === "signUp"){
+      }else if (string = "signUp"){
     // Making sure the passwords match and is at least 6 characters
       if (password !== passwordAuth || password.length < 6) {
       //Displays an error if password criteria is not bet
@@ -177,7 +177,9 @@ function authenticateInfo(string, email, password, passwordAuth){
       console.log(errorDisplay);
       $("#sign-in-box").prepend(errorDisplay);
       return false;
-      }
+      }else {
+        return true;
+      };
     }else{
       console.log("true");
     return true;
