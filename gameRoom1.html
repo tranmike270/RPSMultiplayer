@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPS Multiplayer</title>
+    <!-- Linking Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <!-- Font Awesome CSS Icons (For glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Linking my own CSS file -->
+    <link rel="stylesheet" type="text/css" href="assets/CSS/styles.css">
+
+</head>
+
+
+
+<body id="front-page">
+
+    <div class="container-fluid" id = "page">
+        <div id="game-home-page">
+        <div class= "row" id = "game-nav">
+            <h2>Rock, Paper, Scissors!</h2>
+        </div>
+        <div class="row" id = "game-content">
+            <div class="col-md-8 border-style-1" id = "game-room-holder">
+                <div class="row game-room" value="1">Game Room 1</div>
+                <div class="row game-room" value="2">Game Room 2</div>
+                <div class="row game-room" value="3">Game Room 3</div>
+            </div>
+            <div class="col-md-2 border-style-1 LB-font" id = "LB-most-win">
+                <p id ="LB-most-win-head">Most Wins</p>
+                <ol>
+                    <li id="win-1">N/A</li>
+                    <li id="win-2">N/A</li>
+                    <li id="win-3">N/A</li>
+                </ol>
+            </div>
+            <div class="col-md-2 border-style-1 LB-font" id = "LB-win-percent">
+                    <p id ="LB-most-percent-head">Most Wins</p>
+                    <ol>
+                        <li id="perc-1">N/A</li>
+                        <li id="perc-2">N/A</li>
+                        <li id="perc-3">N/A</li>
+                    </ol>
+            </div>
+        </div>
+        <div class="row border-style-1" id = "chat-room">
+            <div class="col-lg-12" id="chat-box"></div>
+            <div class="col-lg-12">
+                <input type="text" id="user-chat"><button type="button" id="send-message">Send</button>
+            </div>
+        </div>
+        
+    </div>
+
+
+        <div class="jumbotron text-center border-style-1" id="sign-in-box" >
+            <h1 class="display-4" id="front-page-title">Rock, Paper, Scissors!</h1>
+            <p class="lead">Create an account to begin your climb as the Rock, Paper Scissors master!</p>
+            <form >
+                <div class="form-group" id="begin-form">
+                    <label for="email" id="email-lb">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                    <label for="password" id="password-lb">Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                    <label for="passwordAuth" id="password-auth-lb">Retype Password</label>
+                    <input type="password" class="form-control" id="password-auth" placeholder="Retype Password" required>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-lg" id="sign-up-btn">Sign-Up</button>
+                    <br>
+                    <label for="sign-in-btn" id="sign-in-btn-lb">Already have an account?</label>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-lg" id="sign-in-btn">Sign-In</button>
+                </div>
+
+            </form>
+    
+
+        </div>
+
+    </div>
+
+
+    <!-- Linking jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Linking Firebase Script -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <!-- Linking my own JS file -->
+    <script src="assets/JavaScript/scripts.js" type="text/javascript"></script>
+</body>
+
+</html>

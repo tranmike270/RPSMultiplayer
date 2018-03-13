@@ -1,0 +1,54 @@
+html {
+    height:100%;
+}
+#front-page{
+  height:inherit;
+  background-image: url("../images/background.jpg");
+  background-size: 100% 100%;
+}
+
+.border-style-1 {
+    background-color: rgba(255, 255, 255, .5);
+    border: 20px solid transparent;
+    -webkit-border-image: url("../images/border.png") 20 round; /* Safari 3.1-5 */
+    -o-border-image: url("../images/border.png") 20 round; /* Opera 11-12.1 */
+    border-image: url("../images/border.png") 20 round;
+}
+#sign-in-box{
+    
+    position:fixed;
+    top: 20%;
+    left: 15%;
+    width: 70%;
+
+}
+
+h2 {
+    font-size: 12rem;
+}
+.row {
+    text-align: center;
+}
+
+.game-room{
+    font-size: 9rem;
+    text-decoration: underline;
+}
+.game-room:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.LB-font{
+    font-size: 4rem;
+}
+#chat-box{
+    background-color: rgba(0, 0, 0, .5);
+    height:415px; 
+}
+#user-chat{
+    width: 95%;
+}
+
+#game-home-page{
+    visibility: hidden;
+}
