@@ -23,8 +23,9 @@ var authenticate = firebase.auth();
 var dbRef = database.ref();
 var dbRefUsernames = database.ref('usernames/');
 var snaps; 
-dbRefUsernames.on('child_added', function(snapshot){
-  snaps = snapshot.val();
+dbRef.on('value', function(snapshot){
+  snaps = snapshot.val().usernames;
+  console.log(snaps);
   var userCount = Object.keys(snaps).length;
   for (var i = 0; i < userCount; i++)
   {
