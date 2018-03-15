@@ -198,9 +198,7 @@ function displayReplay(){
                 ready : true
               });
             $("#p2-replay-btn").remove();
-        });
-
-     
+        });     
     };
     
 
