@@ -29,7 +29,9 @@ h2 {
 .row {
     text-align: center;
 }
-
+#game-room-holder{
+    height: 430px;
+}
 .game-room{
     font-size: 9rem;
     text-decoration: underline;
@@ -44,12 +46,21 @@ h2 {
 #chat-box{
     background-color: rgba(0, 0, 0, .5);
     height:415px; 
-    overflow: hidden;
+    transform:rotateX(180deg);
+    overflow-y: auto;
 }
 #user-chat{
-    width: 95%;
+    width: 97%;
+    display: inline;
 }
-
+#send-message {
+    display: inline;
+}
+.chat-message{
+    color: white;
+    text-align: left;
+    transform:rotateX(180deg);
+}
 #game-home-page{
     visibility: hidden;
 }
